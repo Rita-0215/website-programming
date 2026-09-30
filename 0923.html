@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div.content {
+            background-color: lightblue;
+            border: 3px;
+            resize: both;
+            overflow: auto;
+        }
+
+        div.blue {
+            float: right;
+            background-color: #1faadb;
+            width: 50%;
+        }
+
+        div.green {
+            float: left;
+            background-color: #8ebf42;
+            width: 50%;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .box {
+            width: 50%;
+            padding: 20px;
+            background-color: rgb(247, 181, 243);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>The overflow Property</h1>
+
+    <div class="content">
+
+        <div class="blue">
+            <p>This is some paragraph inside div tag.</p>
+
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+            </ul>
+        </div>
+
+        <div class="green">
+            <p>This is some paragraph inside div tag.</p>
+
+            <ol>
+                <li>List item 1</li>
+                <li>List item 2</li>
+            </ol>
+        </div>
+    </div>
+
+    <div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+        </div>
+
+        <div class="row">
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
