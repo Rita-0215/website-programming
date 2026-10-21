@@ -73,7 +73,6 @@
             bottom: 0;
             left: 0;
             right: 0;
-
             background: linear-gradient(to right,
                     rgba(0, 0, 0, 0.9),
                     rgba(0, 0, 0, 0));
@@ -160,6 +159,70 @@
 
         .section-text h4 {
             letter-spacing: 2px;
+        }
+
+        /* Travel Planner */
+        .planner {
+            padding: 70px 8%;
+        }
+
+        .planner h2 {
+            font-family: Georgia;
+            font-size: 36px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .planner p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .planner h3 {
+            font-family: Georgia;
+            font-size: 26px;
+            font-weight: normal;
+            margin-top: 65px;
+        }
+
+        .planner table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 35px;
+            font-size: 13px;
+        }
+
+        .planner th,
+        .planner td {
+            padding: 17px 15px;
+            border: 1px solid #eeeae5;
+            text-align: left;
+        }
+
+        .planner th {
+            background-color: #26342e;
+            color: white;
+        }
+
+        .planner tbody tr:nth-child(even) {
+            background-color: #f3f1ed;
+        }
+
+        .planner .day,
+        .planner .category {
+            background-color: #efeee8;
+            font-weight: bold;
+        }
+
+        .planner .special {
+            background-color: #f5e7df;
+            color: #a4453f;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .planner .cost {
+            text-align: right;
         }
 
         /* Photo Gallery */
@@ -251,6 +314,7 @@
 
             .nav {
                 gap: 10px;
+                flex-wrap: wrap;
             }
 
             .nav a {
@@ -275,6 +339,15 @@
             .photo-container {
                 width: 100%;
             }
+
+            .planner {
+                padding: 50px 5%;
+                overflow-x: auto;
+            }
+
+            .planner table {
+                min-width: 520px;
+            }
         }
     </style>
 </head>
@@ -284,25 +357,22 @@
     <!-- Navigation Bar -->
     <header class="topbar">
         <div class="page">
-
             <a class="brand" href="#top">TOKYO.</a>
 
             <ul class="nav">
                 <li><a href="#discover">DISCOVER</a></li>
                 <li><a href="#neighborhoods">NEIGHBORHOODS</a></li>
+                <li><a href="#planner">PLANNER</a></li>
                 <li><a href="#gallery">GALLERY</a></li>
             </ul>
-
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-
         <div class="overlay"></div>
 
         <div class="hero-content">
-
             <div class="small-title">
                 A VISUAL JOURNEY THROUGH JAPAN
             </div>
@@ -313,21 +383,16 @@
                 Quiet temples, electric streets, and little moments in<br>
                 between. Discover a different side of Tokyo.
             </p>
-
         </div>
     </section>
 
     <!-- 01 Discover -->
     <section class="discover" id="discover">
-
         <div class="small-title">01 / DISCOVER</div>
-
         <h2>Where tradition meets tomorrow.</h2>
 
         <div class="discover-content">
-
             <div class="discover-text">
-
                 <h4>MORE THAN A DESTINATION</h4>
 
                 <p>
@@ -349,27 +414,21 @@
                         "The best way to explore Tokyo is to get a little lost."
                     </i>
                 </p>
-
             </div>
 
             <img src="tokyo2.jpg" alt="Tokyo Street">
-
         </div>
     </section>
 
     <!-- 02 Neighborhoods -->
     <section class="section" id="neighborhoods">
-
         <div class="small-title">02 / NEIGHBORHOODS</div>
-
         <h2>Every street has a story.</h2>
 
         <div class="section-content">
-
             <img src="asakusa.jpg" alt="Asakusa">
 
             <div class="section-text">
-
                 <h4>EXPLORE THE CITY</h4>
 
                 <p>
@@ -384,22 +443,111 @@
                     new experience and a different side of
                     the city.
                 </p>
-
             </div>
         </div>
     </section>
 
-    <!-- 03 Gallery -->
-    <section class="section" id="gallery">
+    <!-- 03 Travel Planner -->
+    <section class="planner" id="planner">
+        <div class="small-title">03 / TRAVEL PLANNER</div>
 
-        <div class="small-title">03 / GALLERY</div>
+        <h2>Three Days in Tokyo.</h2>
+
+        <p>
+            Plan your mornings, afternoons, and evenings
+            with this simple three-day itinerary.
+        </p>
+
+        <!-- Three-Day Itinerary -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Morning</th>
+                    <th>Afternoon</th>
+                    <th>Evening</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="day">Day 1</td>
+                    <td>Asakusa Temple</td>
+                    <td>Ueno Park</td>
+                    <td>Shibuya</td>
+                </tr>
+
+                <tr>
+                    <td class="day">Day 2</td>
+                    <td>Meiji Shrine</td>
+                    <td>Harajuku</td>
+                    <td>Shinjuku</td>
+                </tr>
+
+                <tr>
+                    <td class="day">Day 3</td>
+                    <td class="special" colspan="2">
+                        Tokyo DisneySea
+                    </td>
+                    <td>Odaiba</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Travel Budget -->
+        <h3>Travel Budget</h3>
+
+        <p>
+            A sample budget for transportation and meals in Tokyo.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Item</th>
+                    <th>Estimated Cost</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="category" rowspan="2">
+                        Transportation
+                    </td>
+                    <td>Metro</td>
+                    <td class="cost">¥1,000</td>
+                </tr>
+
+                <tr>
+                    <td>Train</td>
+                    <td class="cost">¥1,500</td>
+                </tr>
+
+                <tr>
+                    <td class="category" rowspan="2">
+                        Food
+                    </td>
+                    <td>Lunch</td>
+                    <td class="cost">¥1,200</td>
+                </tr>
+
+                <tr>
+                    <td>Dinner</td>
+                    <td class="cost">¥2,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 04 Gallery -->
+    <section class="section" id="gallery">
+        <div class="small-title">04 / GALLERY</div>
 
         <h2>Moments worth remembering.</h2>
 
         <div class="section-content">
-
             <div class="section-text">
-
                 <h4>CAPTURE THE MOMENT</h4>
 
                 <p>
@@ -413,18 +561,15 @@
                     Discover the colors, energy, and beauty
                     that make Tokyo truly unique.
                 </p>
-
             </div>
 
             <img src="tokyo-night.jpg" alt="Tokyo at Night">
-
         </div>
     </section>
 
-    <!-- 04 Photo Gallery -->
+    <!-- 05 Photo Gallery -->
     <section class="photo-gallery">
-
-        <div class="small-title">04 / HIGHLIGHTS</div>
+        <div class="small-title">05 / HIGHLIGHTS</div>
 
         <h2>Discover Tokyo's beauty.</h2>
 
