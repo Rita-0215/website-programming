@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: Arial;
     background-color: #fff9f5;
-    color: #514349;
+    color: #591533;
 }
 
 /* Navigation Bar */
@@ -51,7 +51,7 @@ body {
 .hero {
     position: relative;
     height: 450px;
-    background-image: url("cover.jpg");
+    background-image: url("top.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -252,6 +252,18 @@ body {
 .photo-overlay p {
     font-size: 13px;
     line-height: 1.6;
+}
+
+/* Instagram */
+.instagram {
+    color: #a45d75;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.instagram:hover {
+    color: #c98f9f;
+    text-decoration: underline;
 }
 
 /* Footer */
